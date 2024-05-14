@@ -1,0 +1,44 @@
+< Criando o ambiente de estudos com o Minikube >
+
+"Minikube é o Kubernetes local, com foco em facilitar o aprendizado e o desenvolvimento para o Kubernetes".
+
+Tudo que você precisa é de um contêiner Docker (ou compatível de forma semelhante).
+
+O que você precisará:
+2 CPUs ou mais
+2 GB de memória livre
+20 GB de espaço livre em disco
+Conexão de internet
+Gerenciador de contêiner ou máquina virtual, como: Docker , QEMU , Hyperkit , Hyper-V , KVM , Parallels , Podman , VirtualBox ou VMware Fusion/Workstation
+
+a) Baixar o instalador em: 
+
+https://lnkd.in/dnAn_43A
+
+b) Instalar o kubectl
+
+Acessar o diretório de downloads, abrir o terminal e executar:
+
+curl -LO "https://lnkd.in/d8_K67WX -s https://lnkd.in/dsn2x3FZ"
+
+chmod +x kubectl
+
+sudo mv kubectl /usr/local/bin/
+
+c) Verificar se o aplictivo foi instalado corretamente:
+
+kubectl version --client
+
+d) Executar o instalador do Minikube
+
+OBS: Se necessário, reiniciar o computador
+
+sudo dpkg -i minikube_latest_amd64.deb
+
+e) Configurar o docker como driver padrão (container runtime) para o Kubernetes 
+
+minikube config set driver docker
+
+f) Inicializar um cluster
+
+minikube start 
