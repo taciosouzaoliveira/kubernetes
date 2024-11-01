@@ -1,44 +1,40 @@
 < Criando o ambiente de estudos com o Minikube >
 
-"Minikube é o Kubernetes local, com foco em facilitar o aprendizado e o desenvolvimento para o Kubernetes".
+"Minikube é o Kubernetes local, com foco em facilitar o aprendizado e o desenvolvimento para o Kubernetes".  # Descrição do Minikube
 
-Tudo que você precisa é de um contêiner Docker (ou compatível de forma semelhante).
+# Pré-requisitos para instalação do Minikube:
+Tudo que você precisa é de um contêiner Docker (ou compatível de forma semelhante).  # Necessidade de um contêiner para executar o Minikube
 
-O que você precisará:
-2 CPUs ou mais
-2 GB de memória livre
-20 GB de espaço livre em disco
-Conexão de internet
-Gerenciador de contêiner ou máquina virtual, como: Docker , QEMU , Hyperkit , Hyper-V , KVM , Parallels , Podman , VirtualBox ou VMware Fusion/Workstation
+O que você precisará:                                # Lista de requisitos de sistema
+2 CPUs ou mais                                       # Requisitos de CPU
+2 GB de memória livre                                # Requisitos de memória RAM
+20 GB de espaço livre em disco                       # Requisitos de espaço em disco
+Conexão de internet                                  # Requisitos de conectividade
+Gerenciador de contêiner ou máquina virtual, como:   # Gerenciadores de contêiner suportados
+Docker , QEMU , Hyperkit , Hyper-V , KVM , Parallels , Podman , VirtualBox ou VMware Fusion/Workstation
 
-a) Baixar o instalador em: 
+a) Baixar o instalador em:                           # Passo para baixar o instalador do Minikube
+https://lnkd.in/dnAn_43A                             # Link para download do instalador
 
-https://lnkd.in/dnAn_43A
+b) Instalar o kubectl                                # Instruções para instalação do kubectl
 
-b) Instalar o kubectl
+Acessar o diretório de downloads, abrir o terminal e executar:  # Navegação até o diretório de downloads
+curl -LO "https://lnkd.in/d8_K67WX -s https://lnkd.in/dsn2x3FZ"  # Download do kubectl
 
-Acessar o diretório de downloads, abrir o terminal e executar:
+chmod +x kubectl                                     # Concede permissão de execução ao arquivo baixado
+sudo mv kubectl /usr/local/bin/                      # Move o executável para o diretório binário local
 
-curl -LO "https://lnkd.in/d8_K67WX -s https://lnkd.in/dsn2x3FZ"
+c) Verificar se o aplicativo foi instalado corretamente:  # Verificação da instalação do kubectl
+kubectl version --client                             # Comando para exibir a versão do kubectl instalado
 
-chmod +x kubectl
+d) Executar o instalador do Minikube                 # Instruções para instalação do Minikube
 
-sudo mv kubectl /usr/local/bin/
+OBS: Se necessário, reiniciar o computador           # Nota sobre a reinicialização do sistema
 
-c) Verificar se o aplictivo foi instalado corretamente:
+sudo dpkg -i minikube_latest_amd64.deb               # Comando para instalar o Minikube utilizando o pacote .deb
 
-kubectl version --client
+e) Configurar o docker como driver padrão (container runtime) para o Kubernetes  # Configuração do driver do Minikube
+minikube config set driver docker                    # Define o Docker como o driver padrão do Minikube
 
-d) Executar o instalador do Minikube
-
-OBS: Se necessário, reiniciar o computador
-
-sudo dpkg -i minikube_latest_amd64.deb
-
-e) Configurar o docker como driver padrão (container runtime) para o Kubernetes 
-
-minikube config set driver docker
-
-f) Inicializar um cluster
-
-minikube start 
+f) Inicializar um cluster                            # Passo final para iniciar o Minikube
+minikube start                                       # Comando para iniciar o cluster Minikube
