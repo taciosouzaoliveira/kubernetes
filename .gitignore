@@ -1,8 +1,1 @@
-.vagrant/
-*.log
-*.tmp
-*.bak
-*.swp
-.DS_Store
-.idea/
-*.retry
+*.pdf
